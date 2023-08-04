@@ -3,33 +3,47 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Budżetu</title>
-    <!-- Usuń zbędne linki do styli -->
-    <!-- Dodaj odpowiednie meta tagi -->
+    <title>Domowy budżet</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
 
 <body>
-    <img src="https://cdn.pixabay.com/photo/2016/10/09/19/19/coins-1726618_960_720.jpg" alt="logo">
-    <h1>Kalkulator Budżetu</h1>
-    <div class="form-container">
-        <!-- Formularz do dodawania przychodu/wydatku -->
-        <form id="budgetForm">
-            <label for="amountInput">Kwota:</label>
-            <input type="number" id="amountInput" required min="0" step="0.01">
-            <label for="typeSelect">Typ:</label>
-            <select id="typeSelect">
-                <option value="income">Przychód</option>
-                <option value="expense">Wydatek</option>
-            </select>
-            <button type="submit">Dodaj</button>
-        </form>
-        <!-- Lista przychodów/wydatków -->
-        <div id="budgetList"></div>
-    </div>
-    <script src="index.js"></script>
+    <div class="wrapper">
+        <div class="image container">
+            <img
+                src="https://media.istockphoto.com/id/1392303722/pl/zdj%C4%99cie/koncepcja-bud%C5%BCetu-na-nowy-rok.jpg?s=612x612&w=0&k=20&c=8N8VuPucSdr34OlHBi-HVriP5FjbGpljeSHbc6H3yQA=">
+            <div class="container">
+                <h1>Domowy budżet</h1>
+
+                <main class="converter">
+                    <h2>Przychody</h2>
+                    <form id="income-form">
+                        Nazwa: <input type="text" id="income-name">
+                        Kwota: <input type="number" id="income-amount" step="0.01">
+                        <button type="button" onclick="addIncome()">Dodaj</button>
+                    </form>
+
+                    <h2>Wydatki</h2>
+                    <form id="expense-form">
+                        Nazwa: <input type="text" id="expense-name">
+                        Kwota: <input type="number" id="expense-amount" step="0.01">
+                        <button type="button" onclick="addExpense()">Dodaj</button>
+                    </form>
+                </main>
+
+                <h2>Bilans</h2>
+                <p id="balance-text"></p>
+
+                <h2>Lista przychodów</h2>
+                <ul id="income-list"></ul>
+
+                <h2>Lista wydatków</h2>
+                <ul id="expense-list"></ul>
+
+            </div>
+        </div>
 </body>
 
 </html>

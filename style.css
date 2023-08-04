@@ -1,79 +1,58 @@
-/* Dodaj odpowiednie style do komponentów */
 body {
-	font-family: Arial, sans-serif;
-}
-
-img {
-	max-width: 100%;
-}
-
-h1 {
-	text-align: center;
-	margin: 20px 0;
-}
-
-.form-container {
-	max-width: 400px;
-	margin: 0 auto;
-	padding: 20px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-}
-
-label,
-select,
-input,
-button {
-	display: block;
-	margin-bottom: 10px;
-}
-
-button {
-	background-color: #4caf50;
-	color: white;
-	border: none;
-	padding: 10px 20px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	border-radius: 5px;
-	cursor: pointer;
-}
-
-.budget-item {
+	font-family: 'Times New Roman', Times, serif;
+	margin: 0;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
-	background-color: #f9f9f9;
-	border: 1px solid #ccc;
-	padding: 10px;
-	margin-bottom: 5px;
+	height: 100vh;
+	background-color: lightgreen;
 }
 
-.amount {
-	font-weight: bold;
+.wrapper {
+	display: flex;
+	max-width: 1200px;
+	margin: auto;
 }
 
-.type {
-	color: #666;
+.container {
+	flex: 1;
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	margin-right: 20px;
 }
 
-.edit,
-.delete {
-	background-color: #f44336;
-	color: white;
-	border: none;
+.image-container {
+	flex: 1;
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.image-container img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
+.edit-button {
+	background-color: #008000;
+}
+
+.delete-button {
+	background-color: #ff0000;
+}
+
+.button {
 	padding: 5px 10px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 12px;
-	border-radius: 3px;
+	background-color: #333;
+	color: #fff;
+	border: none;
 	cursor: pointer;
-}
-
-.edit {
-	background-color: #4caf50;
-	margin-right: 5px;
+	width: 100%;
 }
